@@ -1,13 +1,16 @@
-from config import MUST_JOIN
+# must_join.py
+
 from StringGen import Anony, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 
-
 @Anony.on_message(filters.incoming & filters.private, group=-1)
-async def must_join_channel(bot: Client, msg: Message):
+async def must_join_channel(bot, msg):
+    MUST_JOIN = "your_channel_or_group_here"  # Replace this with your channel or group ID
+    
     if not MUST_JOIN:  # Not compulsory
         return
+    
     try:
         try:
             await bot.get_chat_member(MUST_JOIN, msg.from_user.id)
