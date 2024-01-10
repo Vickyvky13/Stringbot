@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 from StringGen import Anony
 
-@Anony.on_message(~filters.media & filters.incoming & filters.private, group=-1)
+@Anony.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Client, msg: Message):
     if not "https://t.me/solotreee":  # Not compulsory
         return
@@ -17,9 +17,8 @@ async def must_join_channel(bot: Client, msg: Message):
                 chat_info = await bot.get_chat("solotreee")
                 link = chat_info.invite_link
             try:
-                await msg.reply_photo(
-                    photo="https://graph.org/file/77acdef881be3189ba87d.jpg",  # Replace with the URL of your photo
-                    caption=f"⌯︙🌳 W⃟ᴇʟᴄᴏᴍᴇ : {msg.from_user.mention}\n⌯︙🏝️ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ @solotreee\n⌯︙🍃 ꜱᴜʙꜱᴄʀɪʙᴇ ᴛᴏ ᴊᴏɪɴ ㅤㅤㅤㅤㅤㅤㅤᴛʜᴇ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ᴘʟᴇᴀꜱᴇ!!.\n┉───┈┈╌╍╌┄┈───┉┉───┈┈╌",
+                await msg.reply(
+                    f"⌯︙🌳 W⃟ᴇʟᴄᴏᴍᴇ : {msg.from_user.mention}\n⌯︙🏝️ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ @solotreee\n⌯︙🍃 ꜱᴜʙꜱᴄʀɪʙᴇ ᴛᴏ ᴊᴏɪɴ ㅤㅤㅤㅤㅤㅤㅤᴛʜᴇ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ᴘʟᴇᴀꜱᴇ!!.\n┉───┈┈╌╍╌┄┈───┉┉───┈┈╌",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton(u"‹ Solo tree ›", url=link)]
