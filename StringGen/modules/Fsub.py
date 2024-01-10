@@ -23,7 +23,7 @@ async def must_join_channel(bot: Client, msg: Message):
                     caption=f"⌯︙🌳 W⃟ᴇʟᴄᴏᴍᴇ : {msg.from_user.mention}\n⌯︙🏝️ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ @solotreee\n⌯︙🍃 ꜱᴜʙꜱᴄʀɪʙᴇ ᴛᴏ ᴊᴏɪɴ ㅤㅤㅤㅤㅤㅤㅤᴛʜᴇ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ᴘʟᴇᴀꜱᴇ!!.\n┉───┈┈╌╍╌┄┈───┉┉───┈┈╌", 
                     reply_markup=InlineKeyboardMarkup([ 
                         [InlineKeyboardButton(u"‹ Solo tree ›", url=link)],
-                        [InlineKeyboardButton(u"Start Bot", callback_data="start_bot")]
+                        [InlineKeyboardButton(u"Start Bot", url="https://t.me/Solostringsession_bot?start=help")]
                     ]) 
                 ) 
                 await msg.stop_propagation() 
