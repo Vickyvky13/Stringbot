@@ -17,9 +17,10 @@ async def must_join_channel(bot: Client, msg: Message):
                 chat_info = await bot.get_chat("solotreee")
                 link = chat_info.invite_link
             try:
-                await msg.reply(
-                    f"⌯︙🌳 W⃟ᴇʟᴄᴏᴍᴇ : {msg.from_user.mention}\n⌯︙🏝️ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ @solotreee\n⌯︙🍃 ꜱᴜʙꜱᴄʀɪʙᴇ ᴛᴏ ᴊᴏɪɴ ㅤㅤㅤㅤㅤㅤㅤᴛʜᴇ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ᴘʟᴇᴀꜱᴇ!!.\n┉───┈┈╌╍╌┄┈───┉┉───┈┈╌",
-                    disable_web_page_preview=True,
+                await bot.send_photo(
+                    chat_id=msg.chat.id,
+                    photo="https://graph.org/file/77acdef881be3189ba87d.jpg",  # Replace "URL_TO_YOUR_PHOTO" with the actual URL of your photo
+                    caption=f"⌯︙🌳 W⃟ᴇʟᴄᴏᴍᴇ : {msg.from_user.mention}\n⌯︙🏝️ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ @solotreee\n⌯︙🍃 ꜱᴜʙꜱᴄʀɪʙᴇ ᴛᴏ ᴊᴏɪɴ ㅤㅤㅤㅤㅤㅤㅤᴛʜᴇ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ᴘʟᴇᴀꜱᴇ!!.\n┉───┈┈╌╍╌┄┈───┉┉───┈┈╌",
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton(u"‹ Solo tree ›", url=link)]
                     ])
