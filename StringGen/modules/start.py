@@ -3,6 +3,7 @@ from pyrogram import filters
   
  from StringGen import Anony 
  from StringGen.utils import add_served_user, keyboard 
+from pyrogram.types import Message
 
  force_btn = InlineKeyboardMarkup([ 
      [InlineKeyboardButton(text="🍁ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ🍂", url="t.me/solotreee")], 
