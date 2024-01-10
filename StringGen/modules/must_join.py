@@ -4,7 +4,11 @@ from StringGen import Anony, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 
-@Anony.on_message(filters.incoming & filters.private, group=-1)
+def combined_filter(message):
+    # Implement the logic to combine incoming and private filters
+    return filters.incoming(message) and filters.private(message)
+
+@Anony.on_message(combined_filter, group=-1)
 async def must_join_channel(bot, msg):
     MUST_JOIN = "your_channel_or_group_here"  # Replace this with your channel or group ID
     
