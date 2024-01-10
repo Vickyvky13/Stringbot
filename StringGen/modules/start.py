@@ -5,8 +5,7 @@ from StringGen.utils import add_served_user, keyboard
 
 # Your InlineKeyboardMarkup for force subscription
 force_btn = InlineKeyboardMarkup([
-    [InlineKeyboardButton(text="🍁ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ🍂", url="t.me/solotreee")],
-    [InlineKeyboardButton(text="〄╏ᴄʜᴀᴛ ɢᴘᴛ╏ᴀɪ🧞", url="t.me/Chatgptasking_bot")]
+    [InlineKeyboardButton(text="🍁ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ🍂", url="t.me/solotreee")]
 ])
 
 # Function to check if user has joined specific channels
@@ -19,11 +18,8 @@ async def check_is_joined(message, client):
         # Check membership status in "solotreee" channel
         status_solotreee = await client.get_chat_member("solotreee", userid)
         
-        # Check membership status in "Chatgptasking_bot" channel
-        status_chatgpt = await client.get_chat_member("Chatgptasking_bot", userid)
-        
-        # Check if the user is a member of both channels
-        if status_solotreee.status == "member" and status_chatgpt.status == "member":
+        # Check if the user is a member of the "solotreee" channel
+        if status_solotreee.status == "member":
             return True
         else:
             await message.reply_text(
