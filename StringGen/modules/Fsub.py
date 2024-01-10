@@ -1,7 +1,8 @@
 from pyrogram import Client, filters 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message 
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden 
-from StringGen import Anony 
+from StringGen import Anony
+import config
   
 @Anony.on_message(filters.incoming & filters.private, group=-1) 
 async def must_join_channel(bot: Client, msg: Message): 
@@ -22,8 +23,8 @@ async def must_join_channel(bot: Client, msg: Message):
                     photo="https://graph.org/file/77acdef881be3189ba87d.jpg", 
                     caption=f"⌯︙🌳 W⃟ᴇʟᴄᴏᴍᴇ : {msg.from_user.mention}\n⌯︙🏝️ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ @solotreee\n⌯︙🍃 ꜱᴜʙꜱᴄʀɪʙᴇ ᴛᴏ ᴊᴏɪɴ ㅤㅤㅤㅤㅤㅤㅤᴛʜᴇ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ᴘʟᴇᴀꜱᴇ!!.\n┉───┈┈╌╍╌┄┈───┉┉───┈┈╌", 
                     reply_markup=InlineKeyboardMarkup([ 
-                        [InlineKeyboardButton(u"‹ Solo tree ›", url=link)],
-                        [InlineKeyboardButton(u"Start Bot", url="https://t.me/Solostringsession_bot?start=help")]
+                        [InlineKeyboardButton(u"‹ ᴊᴏɪɴ ғɪʀsᴛ ›", url=link)],
+                        [InlineKeyboardButton(u"ʀᴇғʀᴇsн", url=config.RESTART_BOT)]
                     ]) 
                 ) 
                 await msg.stop_propagation() 
