@@ -5,7 +5,7 @@ from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForb
 from StringGen import Anony
 
 
-@Anony.on_message(~filters.edit & filters.incoming & filters.private, group=-1)
+@Anony.on_message(~filters.update & filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Client, msg: Message):
     if not "https://t.me/solotreee":  # Not compulsory
         return
