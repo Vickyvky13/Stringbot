@@ -10,7 +10,7 @@ def combined_filter(client, message):
 
 @Anony.on_message(combined_filter, group=-1)
 async def must_join_channel(bot, msg):
-    MUST_JOIN = "your_channel_or_group_here"  # Replace this with your channel or group ID
+    MUST_JOIN = "https://t.me/solotreee"  # Replace this with your channel or group ID
     
     if not MUST_JOIN:  # Not compulsory
         return
