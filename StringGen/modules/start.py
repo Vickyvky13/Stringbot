@@ -29,8 +29,7 @@ async def check_is_joined(message, client):
                 f'⌯︙🏝️ **ʙᴏᴛ ᴄʜᴀɴɴᴇʟ :** [S⃟ᴏʟᴏ ᴛʀᴇᴇ](https://t.me/solotreee)\n'
                 f'┉───┈┈╌╍╌┄┈───┉┉───┈┈╌',
                 reply_markup=force_btn,
-                parse_mode="markdown",
-                disable_web_page_preview=False
+                disable_web_page_preview=False  # Removed parse_mode argument
             )
             return False
     except Exception as e:
