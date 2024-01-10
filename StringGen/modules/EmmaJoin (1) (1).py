@@ -1,11 +1,9 @@
-# telegram: @bbnnQ ~ My channel: @cczza حقوق.
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 from StringGen import Anony
 
-
-@Anony.on_message(~filters.edited & filters.incoming & filters.private, group=-1)
+@Anony.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Client, msg: Message):
     if not "https://t.me/solotreee":  # Not compulsory
         return
@@ -31,3 +29,4 @@ async def must_join_channel(bot: Client, msg: Message):
                 pass
     except ChatAdminRequired:
         print(f"Promote the admin bot in the channel: @solotreee!")
+        
