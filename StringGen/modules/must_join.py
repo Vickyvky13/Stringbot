@@ -4,9 +4,9 @@ from StringGen import Anony, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 
-def combined_filter(message):
+def combined_filter(client, message):
     # Implement the logic to combine incoming and private filters
-    return filters.incoming(message) and filters.private(message)
+    return filters.incoming(client, message) and filters.private(client, message)
 
 @Anony.on_message(combined_filter, group=-1)
 async def must_join_channel(bot, msg):
