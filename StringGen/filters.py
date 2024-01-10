@@ -2,8 +2,12 @@
 
 def incoming(client, message):
     # Implement the logic for incoming messages filter
-    return True  # Modify this based on your filter criteria
+    if message.text and "keyword" in message.text.lower():  # Modify this condition based on your filter criteria
+        return True
+    return False  # Message does not meet the criteria
 
 def private(client, message):
     # Implement the logic for private messages filter
-    return True  # Modify this based on your filter criteria
+    if message.chat.type == "private":
+        return True
+    return False  # Message is not from a private chat
