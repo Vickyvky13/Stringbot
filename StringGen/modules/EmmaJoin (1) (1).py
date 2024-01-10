@@ -22,8 +22,7 @@ async def must_join_channel(bot: Client, msg: Message):
                     caption=f"⌯︙🌳 W⃟ᴇʟᴄᴏᴍᴇ : {msg.from_user.mention}\n⌯︙🏝️ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ @solotreee\n⌯︙🍃 ꜱᴜʙꜱᴄʀɪʙᴇ ᴛᴏ ᴊᴏɪɴ ㅤㅤㅤㅤㅤㅤㅤᴛʜᴇ ʙᴏᴛ ᴄʜᴀɴɴᴇʟ ᴘʟᴇᴀꜱᴇ!!.\n┉───┈┈╌╍╌┄┈───┉┉───┈┈╌",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton(u"‹ Solo tree ›", url=link)],
-                        [InlineKeyboardButton(u"Restart Bot", callback_data="restart_bot")]
+                        [InlineKeyboardButton(u"‹ Solo tree ›", url=link)]
                     ])
                 )
                 await msg.stop_propagation()
@@ -31,4 +30,3 @@ async def must_join_channel(bot: Client, msg: Message):
                 pass
     except ChatAdminRequired:
         print(f"Promote the admin bot in the channel: @solotreee!")
-        
