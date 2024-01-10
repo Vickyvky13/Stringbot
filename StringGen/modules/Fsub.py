@@ -3,6 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden 
 from StringGen import Anony
 import config
+import random
   
 @Anony.on_message(filters.incoming & filters.private, group=-1) 
 async def must_join_channel(bot: Client, msg: Message): 
