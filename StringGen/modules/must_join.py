@@ -5,12 +5,11 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 
 def combined_filter(client, message):
-    # Implement the logic to combine incoming and private filters
     return filters.incoming(client, message) and filters.private(client, message)
 
 @Anony.on_message(combined_filter, group=-1)
 async def must_join_channel(bot, msg):
-    MUST_JOIN = "https://t.me/solotreee"  # Replace this with your channel or group ID
+    MUST_JOIN = "your_channel_or_group_here"  # Replace this with your channel or group ID
     
     if not MUST_JOIN:  # Not compulsory
         return
