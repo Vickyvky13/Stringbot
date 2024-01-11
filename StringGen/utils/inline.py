@@ -5,6 +5,7 @@ import asyncio
 
 from config import SUPPORT_CHAT, COOWNER_ID
 import time
+import config
 
 async def delete_message_after_2min(client, message):
     time.sleep(120)  # Wait for 2 minutes
