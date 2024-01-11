@@ -4,6 +4,7 @@ from pyrogram.errors import MessageDeleteForbidden
 import asyncio
 import random
 from config import SUPPORT_CHAT
+from pyrogram import filters
 
 async def delete_message_after_2min(client, message):
     time.sleep(120)
