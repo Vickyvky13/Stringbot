@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import MessageDeleteForbidden
 import asyncio
 
-from config import SUPPORT_CHAT, COOWNER_ID
+from config import SUPPORT_CHAT
 import time
 import config
 
