@@ -31,6 +31,7 @@ keyboard = InlineKeyboardMarkup([
             text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/solotreee"
         ),
     ],
+        [InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ", callback_data="gensession")],
 ])
 
 gen_key = InlineKeyboardMarkup([
