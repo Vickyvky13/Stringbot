@@ -42,5 +42,12 @@ gen_key = InlineKeyboardMarkup([
     ], 
     [InlineKeyboardButton(text="ᴛᴇʟᴇᴛʜᴏɴ", callback_data="telethon")], 
 ]) 
-
+so=["https://telegra.ph/file/1b1e1359c2e794f07ce75.mp4", "https://telegra.ph/file/f92fe8b57929dc37f2592.mp4"] 
+ @app.on_callback_query(filters.regex("sour")) 
+ async def sour(_, query: CallbackQuery): 
+     ur=random.choice(so) 
+     await query.edit_message_media( 
+         media=InputMediaVideo(ur, has_spoiler=True), 
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="settingsback_helper")]]), 
+     )
 retry_key = InlineKeyboardMarkup([[InlineKeyboardButton(text="ᴛʀʏ ᴀɢᴀɪɴ", callback_data="gensession")]])
