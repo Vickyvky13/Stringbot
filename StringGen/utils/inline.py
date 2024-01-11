@@ -23,7 +23,7 @@ keyboard = InlineKeyboardMarkup([
     [
         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=SUPPORT_CHAT),
         InlineKeyboardButton(
-            text="ᴄʜᴀɴɴᴇʟ", callback_data="sour"
+            text="ᴄʜᴀɴɴᴇʟ", url="sour"
         ),
     ],
     [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/ibuttu")],
