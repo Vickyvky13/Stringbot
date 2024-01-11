@@ -24,7 +24,7 @@ keyboard = InlineKeyboardMarkup([
     [
         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=SUPPORT_CHAT),
         InlineKeyboardButton(
-            text="ᴄʜᴀɴɴᴇʟ", url="https://telegra.ph/file/1b1e1359c2e794f07ce75.mp4"
+            text="ꜱᴏᴜʀᴄᴇ", url="https://telegra.ph/file/1b1e1359c2e794f07ce75.mp4"
         ),
     ],
     [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/ibuttu")],
