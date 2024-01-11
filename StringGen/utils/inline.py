@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import MessageDeleteForbidden
 import asyncio
 
-from config import SUPPORT_CHAT, COOWNER 
+from config import SUPPORT_CHAT, COOWNER_ID
 import time
 
 async def delete_message_after_2min(client, message):
@@ -31,7 +31,7 @@ keyboard = InlineKeyboardMarkup([
             text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/solotreee"
         ),
     ],
-        [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=config.COOWNER)],
+        [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=config.COOWNER_ID)],
 ])
 
 gen_key = InlineKeyboardMarkup([
