@@ -1,4 +1,6 @@
 from os import getenv
+import random
+
 
 from dotenv import load_dotenv
 
