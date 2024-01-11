@@ -20,3 +20,5 @@ COOWNER_ID = int(getenv("COOWNER_ID", 5903371502))
 so = ["https://telegra.ph/file/1b1e1359c2e794f07ce75.mp4", "https://telegra.ph/file/f92fe8b57929dc37f2592.mp4"]
 
 SOURCE_IMG_URL = random.choice(so)
+
+load_dotenv()
