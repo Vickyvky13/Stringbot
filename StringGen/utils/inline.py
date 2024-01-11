@@ -32,7 +32,7 @@ keyboard = InlineKeyboardMarkup([
             text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/solotreee"
         ),
     ],
-        [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=config.COOWNER_ID)],
+        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=config.COOWNER_ID)
 ])
 
 gen_key = InlineKeyboardMarkup([
