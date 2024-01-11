@@ -1,6 +1,7 @@
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import MessageDeleteForbidden
+import asyncio
 
 from config import SUPPORT_CHAT
 import time
@@ -11,6 +12,7 @@ async def delete_message_after_2min(client, message):
         await message.delete()
     except MessageDeleteForbidden:
         # Handle case where the bot doesn't have permission to delete messages
+        pass
 
 # Assuming you have an async function to handle your inline queries
 @Client.on_callback_query()
